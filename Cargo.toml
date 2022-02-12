@@ -10,6 +10,7 @@ systemd_schema = { git = "https://github.com/Aposhian/systemd-schema" }
 serde_ini = "0.2.0"
 schemafy = "0.6.0"
 serde = "^1.0"
+serde_json = "^1.0"
 
 [build-dependencies]
 reqwest = { version = "0.11", features = ["blocking", "json"] }
