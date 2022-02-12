@@ -4,7 +4,6 @@ use std::env;
 use std::fs;
 use std::path::Path;
 use std::process::Command;
-use std::io::Write;
 
 use schemafy_lib::Expander;
 
@@ -20,6 +19,6 @@ fn main() {
     fs::write(&dest_path, code_string).unwrap();
     Command::new("rustfmt")
         .arg(&dest_path)
-        .output();
+        .output().unwrap();
     println!("cargo:rerun-if-changed=build.rs");
 }
