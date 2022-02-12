@@ -1,0 +1,25 @@
+// build.rs
+
+use std::env;
+use std::fs;
+use std::path::Path;
+use std::process::Command;
+
+use schemafy_lib::{Expander, Schema};
+
+fn main() {
+    let res =reqwest::blocking::get("https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json").unwrap();
+    let schema = serde_json::from_str(&res.text().unwrap()).unwrap();
+    let mut expander = Expander::new(Some("compose-spec"), "", &schema);
+    let code = expander.expand(&schema);
+    let out_dir = env::var_os("OUT_DIR").unwrap();
+    let dest_path = Path::new(&out_dir).join("compose-spec.rs");
+    fs::write(
+        &dest_path,
+        code.to_string()
+    ).unwrap();
+    Command::new("rustfmt")
+        .arg(&dest_path)
+        .output();
+    println!("cargo:rerun-if-changed=build.rs");
+}

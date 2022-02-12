@@ -18,3 +18,16 @@ It is possible that this project may be extended to support a Docker backend as 
 - Install `docker-compose.yml` files to `/etc/systemd-compose/`
 - Reboot system, or call `systemctl daemon-reload`
 - Have all your containerized services start, and be visible from `systemctl`
+
+# Choice of how to parse compose files
+While there are small projects that implement Serde for the compose spec like 
+https://github.com/emk/compose_yml and https://github.com/stephanbuys/docker-compose-types, they do not support the latest compose spec, are not highly maintained, and are more focused on programmatic usability.
+
+Important: for this generator, we don't care about usability in generating compose files programmatically. We just want to be able to read, validate, and translate them.
+
+The compose spec is published as a JSON schema in addition to a document. We want to stay as close to this JSON schema as possible (https://github.com/compose-spec/compose-spec/blob/master/schema/compose-spec.json).
+
+Backwards compatibility with previous compose spec versions (notably Compose v2) is not a priority.
+
+# Why serde for systemd then?
+There is no official machine-readable schema for systemd that I could find, so I created one at https://github.com/Aposhian/systemd-schema.
