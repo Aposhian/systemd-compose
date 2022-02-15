@@ -40,77 +40,77 @@ My first priority is to implement the bare minimum of compose spec features to b
 
 ### Proof of Concept
 - Compose file support:
-    - [] [`image`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#image)
-    - [] [`entrypoint`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#entrypoint)
-    - [] [`command`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#command)
+    - [ ] [`image`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#image)
+    - [ ] [`entrypoint`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#entrypoint)
+    - [ ] [`command`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#command)
 - Service file generation:
-    - [] Podman container start
-    - [] Podman container creation
+    - [ ] Podman container start
+    - [ ] Podman container creation
 
 ### Minimum Viable Product
 - Compose file support:
-    - [] [`networks`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#networks)
-    - [] [`network_mode`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#network_mode)
-    - [] [`container_name`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#container_name)
-    - [] [`ports`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#ports)
-    - [] [`volumes`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes)
-    - [] [`depends_on`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#depends_on)
-    - [] [`env_file`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#env_file)
-    - [] [`environment`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#environment)
-    - [] [`expose`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#expose)
+    - [ ] [`networks`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#networks)
+    - [ ] [`network_mode`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#network_mode)
+    - [ ] [`container_name`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#container_name)
+    - [ ] [`ports`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#ports)
+    - [ ] [`volumes`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes)
+    - [ ] [`depends_on`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#depends_on)
+    - [ ] [`env_file`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#env_file)
+    - [ ] [`environment`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#environment)
+    - [ ] [`expose`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#expose)
 - Service file generation:
-    - [] Podman bridged network creation
+    - [ ] Podman bridged network creation
 - CI:
-    - [] amd64 binaries release to GitHub
-    - [] arm64 binaries release to GitHub
+    - [ ] amd64 binaries release to GitHub
+    - [ ] arm64 binaries release to GitHub
 
 ## Compose Spec Compliance Roadmap
 Eventually, I would like as much compliance with the compose spec as is practicable for systemd (single host systems).
 
 ### More Lifecycle Management
-- [] [`restart`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#restart)
-- [] [`restart_policy`](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#restart_policy)
+- [ ] [`restart`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#restart)
+- [ ] [`restart_policy`](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#restart_policy)
 
 ### Compose file flexibility
-- [] [`extends`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#extends)
-- [] Environment variable interpolation
+- [ ] [`extends`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#extends)
+- [ ] Environment variable interpolation
 
 ### Add Resource Control
-- [] [`deploy.resources.limits.cpus`](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#cpus)
-- [] [`deploy.resources.limits.memory`](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#memory)
-- [] [`cpuset`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cpuset)
+- [ ] [`deploy.resources.limits.cpus`](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#cpus)
+- [ ] [`deploy.resources.limits.memory`](https://github.com/compose-spec/compose-spec/blob/master/deploy.md#memory)
+- [ ] [`cpuset`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cpuset)
 
 ### Majority Use Case Compose Spec Support
-- [] `devices`
-- [] `ipc`
-- [] `init`
-- [] `labels`
-- [] [`runtime`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#runtime)
+- [ ] `devices`
+- [ ] `ipc`
+- [ ] `init`
+- [ ] `labels`
+- [ ] [`runtime`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#runtime)
 
 ### Compose Spec Compliance
-- [] `isolation`
-- [] `group_add`
-- [] `links`
-- [] `logging`
-- [] [`build`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#build)
-- [] [`cgroup_parent`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cgroup_parent)
-- [] [`configs`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#configs)
-- [] [`credential_spec`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#credential_spec)
-- [] [`device_cgroup_rules`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#device_cgroup_rules)
-- [] [`dns`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#dns)
-- [] [`dns_opt`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#dns_opt)
-- [] [`dns_search`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#dns_search)
-- [] [`domainname`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#domainname)
-- [] [`healthcheck`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#healthcheck)
-- [] [`cap_add`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cap_add)
-- [] [`cap_drop`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cap_drop)
-- [] [`external_links`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#external_links)
-- [] `extra_hosts`
+- [ ] `isolation`
+- [ ] `group_add`
+- [ ] `links`
+- [ ] `logging`
+- [ ] [`build`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#build)
+- [ ] [`cgroup_parent`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cgroup_parent)
+- [ ] [`configs`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#configs)
+- [ ] [`credential_spec`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#credential_spec)
+- [ ] [`device_cgroup_rules`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#device_cgroup_rules)
+- [ ] [`dns`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#dns)
+- [ ] [`dns_opt`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#dns_opt)
+- [ ] [`dns_search`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#dns_search)
+- [ ] [`domainname`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#domainname)
+- [ ] [`healthcheck`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#healthcheck)
+- [ ] [`cap_add`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cap_add)
+- [ ] [`cap_drop`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#cap_drop)
+- [ ] [`external_links`](https://github.com/compose-spec/compose-spec/blob/master/spec.md#external_links)
+- [ ] `extra_hosts`
 - etc.
 
 ## `systemd-compose` script wrapper
 To make this project easier to use, I would eventually like to create a script wrapper that helps with setup, and maybe even mimics functionality of `docker-compose` or `podman-compose`.
 
-- [] Add `install` verb that copies compose files into the generator's directory
-- [] Add `up` verb that installs, and then immediately does a `systemctl enable` and `systemctl start`
-- [] Add `down` verb that does `systemctl stop`, `systemctl disable`, and uninstalls compose files
+- [ ] Add `install` verb that copies compose files into the generator's directory
+- [ ] Add `up` verb that installs, and then immediately does a `systemctl enable` and `systemctl start`
+- [ ] Add `down` verb that does `systemctl stop`, `systemctl disable`, and uninstalls compose files
