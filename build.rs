@@ -10,7 +10,7 @@ use schemafy_lib::Expander;
 fn main() {
     let res =reqwest::blocking::get("https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json").unwrap();
     let schema = serde_json::from_str(&res.text().unwrap()).unwrap();
-    let mut expander = Expander::new(Some("compose-spec"), "", &schema);
+    let mut expander = Expander::new(Some("Compose"), "", &schema);
     let code = expander.expand(&schema);
     let out_dir = env::var_os("OUT_DIR").unwrap();
     let dest_path = Path::new(&out_dir).join("compose-spec.rs");
