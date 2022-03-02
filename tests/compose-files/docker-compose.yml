@@ -1,4 +1,0 @@
-services:
-  nop:
-    image: busybox
-    command: cat /etc/hostname
