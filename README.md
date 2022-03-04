@@ -24,6 +24,9 @@ Originally, I thought to use Rust, and develop a custom serde library for system
 
 Backwards compatibility with previous compose spec versions (notably Compose v2) is not a priority.
 
+# Alternatives
+I could use `podman-compose` to start containers for the first time, and then use `podman generate systemd` to generate unit files for those containers, and then install those on the target. However, this requires three steps. Even if I automated it, `podman-compose` doesn't yet support `docker-compose create`, so I couldn't just create the containers without running them.
+
 # Roadmap
 Here is a rough outline and checklist of the features that I want to implement, and the priority with which I want to implement them.
 

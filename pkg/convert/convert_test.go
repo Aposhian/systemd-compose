@@ -1,8 +1,8 @@
 package convert
 
 import (
-	"testing"
 	compose "github.com/compose-spec/compose-go/types"
+	"testing"
 )
 
 func Test_Convert(t *testing.T) {
