@@ -1,3 +1,3 @@
 module github.com/aposhian/systemd-compose
 
-go 1.16
+go 1.17
